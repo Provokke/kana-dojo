@@ -252,13 +252,7 @@ const baseThemeSets: BaseThemeGroup[] = [
     name: 'Dark',
     icon: Moon,
     themes: [
-      {
-        id: 'sushi-counter',
-        backgroundColor: 'oklch(23.0% 0.028 70.0 / 1)',
-        mainColor: 'oklch(70.0% 0.145 20.0 / 1)',
-        secondaryColor: 'oklch(68.0% 0.095 75.0 / 1)',
-      },
-
+      
       {
         id: 'samurai-steel',
         backgroundColor: 'oklch(18.0% 0.022 250.0 / 1)',
@@ -1099,27 +1093,10 @@ const baseThemeSets: BaseThemeGroup[] = [
         secondaryColor: 'oklch(68.0% 0.205 30.0 / 1)',
       },
       {
-        id: 'sunset-train',
-        backgroundColor: 'oklch(22.0% 0.052 45.0 / 1)',
-        mainColor: 'oklch(88.0% 0.165 65.0 / 1)',
-        secondaryColor: 'oklch(72.0% 0.185 35.0 / 1)',
-      },{
-        id: 'castle-gate',
-        backgroundColor: 'oklch(23.0% 0.018 75.0 / 1)',
-        mainColor: 'oklch(70.0% 0.055 80.0 / 1)',
-        secondaryColor: 'oklch(60.0% 0.145 25.0 / 1)',
-      },
-      {
         id: 'onsen-steam',
         backgroundColor: 'oklch(25.0% 0.022 210.0 / 1)',
         mainColor: 'oklch(85.0% 0.085 215.0 / 1)',
         secondaryColor: 'oklch(70.0% 0.065 195.0 / 1)',
-      },
-      {
-        id: 'sunset-train',
-        backgroundColor: 'oklch(22.0% 0.052 45.0 / 1)',
-        mainColor: 'oklch(88.0% 0.165 65.0 / 1)',
-        secondaryColor: 'oklch(72.0% 0.185 35.0 / 1)',
       },
       {
         id: 'lavender-fields',
