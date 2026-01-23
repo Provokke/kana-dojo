@@ -2,8 +2,6 @@ import type { Metadata } from 'next';
 import { getBlogPosts, BlogList } from '@/features/Blog';
 import { routing, type Locale } from '@/core/i18n/routing';
 import { generatePageMetadata } from '@/core/i18n/metadata-helpers';
-import { BreadcrumbSchema } from '@/shared/components/SEO/BreadcrumbSchema';
-import { Breadcrumbs } from '@/shared/components/Breadcrumbs';
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));
