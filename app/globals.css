@@ -231,6 +231,45 @@ input[type='checkbox']:focus-visible {
   font-family: serif;
 }
 
+.editorial-content table {
+  display: block;
+  width: 100%;
+  min-width: 640px;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--card-color);
+  overflow-x: auto;
+  box-shadow: 0 20px 45px -40px rgba(0, 0, 0, 0.45);
+}
+
+.editorial-content table thead th {
+  background: var(--card-color);
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.65rem;
+}
+
+.editorial-content table th,
+.editorial-content table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.editorial-content table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.editorial-content table tbody tr:nth-child(even) td {
+  background: color-mix(in srgb, var(--card-color) 88%, var(--main-color) 12%);
+}
+
+.editorial-content table tbody tr:hover td {
+  background: color-mix(in srgb, var(--card-color) 82%, var(--main-color) 18%);
+}
+
 .hero-text-glow {
   text-shadow: 0 0 20px hsla(var(--main-color), 0.1);
 }

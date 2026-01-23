@@ -89,7 +89,7 @@ const components = {
   // Standard HTML element styling with editorial refinement
   h2: ({ children }: { children: React.ReactNode }) => (
     <h2
-      className='premium-serif mt-16 mb-8 text-4xl font-black tracking-tight text-[var(--main-color)]'
+      className='premium-serif mt-14 mb-5 text-4xl font-black tracking-tight text-[var(--main-color)]'
       id={generateHeadingId(String(children))}
     >
       {children}
@@ -97,7 +97,7 @@ const components = {
   ),
   h3: ({ children }: { children: React.ReactNode }) => (
     <h3
-      className='premium-serif mt-12 mb-6 text-2xl font-bold text-[var(--main-color)] italic'
+      className='premium-serif mt-10 mb-4 text-2xl font-bold text-[var(--main-color)] italic'
       id={generateHeadingId(String(children))}
     >
       {children}
@@ -105,41 +105,47 @@ const components = {
   ),
   h4: ({ children }: { children: React.ReactNode }) => (
     <h4
-      className='mt-8 mb-4 text-xl font-bold tracking-tight text-[var(--main-color)]'
+      className='mt-8 mb-3 text-xl font-bold tracking-tight text-[var(--main-color)]'
       id={generateHeadingId(String(children))}
     >
       {children}
     </h4>
   ),
   p: ({ children }: { children: React.ReactNode }) => (
-    <p className='mb-8 text-lg leading-[1.8] text-[var(--secondary-color)] opacity-90'>
+    <p className='mb-6 text-lg leading-[1.85] text-[var(--secondary-color)] opacity-90'>
       {children}
     </p>
   ),
-  ul: ({ children }: { children: React.ReactNode }) => (
-    <ul className='mb-8 list-none space-y-4 pl-0 text-[var(--secondary-color)]'>
-      {React.Children.map(children, child => (
-        <li className='flex items-start gap-4'>
-          <span className='mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--main-color)] opacity-20' />
-          <span className='leading-relaxed'>{child}</span>
-        </li>
-      ))}
-    </ul>
-  ),
-  ol: ({ children }: { children: React.ReactNode }) => (
-    <ol className='mb-8 list-none space-y-4 pl-0 text-[var(--secondary-color)]'>
-      {React.Children.map(children, (child, index) => (
-        <li className='flex items-start gap-4'>
-          <span className='mt-1.5 font-mono text-[10px] font-black opacity-20'>
-            {(index + 1).toString().padStart(2, '0')}
-          </span>
-          <span className='leading-relaxed'>{child}</span>
-        </li>
-      ))}
-    </ol>
-  ),
+  ul: ({ children }: { children: React.ReactNode }) => {
+    const items = normalizeListItems(children);
+    return (
+      <ul className='mb-7 list-none space-y-3 pl-0 text-[var(--secondary-color)]'>
+        {items.map((child, index) => (
+          <li key={index} className='flex items-start gap-4'>
+            <span className='mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--main-color)] opacity-25' />
+            <span className='leading-[1.75]'>{child}</span>
+          </li>
+        ))}
+      </ul>
+    );
+  },
+  ol: ({ children }: { children: React.ReactNode }) => {
+    const items = normalizeListItems(children);
+    return (
+      <ol className='mb-7 list-none space-y-3 pl-0 text-[var(--secondary-color)]'>
+        {items.map((child, index) => (
+          <li key={index} className='flex items-start gap-4'>
+            <span className='mt-1.5 font-mono text-[10px] font-black opacity-25'>
+              {(index + 1).toString().padStart(2, '0')}
+            </span>
+            <span className='leading-[1.75]'>{child}</span>
+          </li>
+        ))}
+      </ol>
+    );
+  },
   li: ({ children }: { children: React.ReactNode }) => (
-    <span className='leading-relaxed'>{children}</span>
+    <span className='leading-[1.75]'>{children}</span>
   ),
   a: ({ href, children }: { href?: string; children: React.ReactNode }) => (
     <a
@@ -152,7 +158,7 @@ const components = {
     </a>
   ),
   blockquote: ({ children }: { children: React.ReactNode }) => (
-    <blockquote className='premium-serif my-16 border-l-[3px] border-[var(--main-color)] pl-12 text-3xl leading-relaxed font-light text-[var(--main-color)] italic opacity-90'>
+    <blockquote className='premium-serif my-12 border-l-[3px] border-[var(--main-color)] pl-10 text-3xl leading-[1.6] font-light text-[var(--main-color)] italic opacity-90'>
       {children}
     </blockquote>
   ),
@@ -172,29 +178,31 @@ const components = {
       );
     }
     return (
-      <code className='block overflow-x-auto rounded-sm border border-[var(--border-color)] bg-[var(--card-color)] p-8 font-mono text-[0.9em]'>
+      <code className='block overflow-x-auto rounded-sm border border-[var(--border-color)] bg-[var(--card-color)] p-7 font-mono text-[0.9em]'>
         {children}
       </code>
     );
   },
   pre: ({ children }: { children: React.ReactNode }) => (
-    <pre className='my-12 overflow-x-auto rounded-sm border border-[var(--border-color)] bg-[var(--card-color)] p-0'>
+    <pre className='my-10 overflow-x-auto rounded-sm border border-[var(--border-color)] bg-[var(--card-color)] p-0'>
       {children}
     </pre>
   ),
-  hr: () => <hr className='my-24 border-[var(--border-color)] opacity-50' />,
+  hr: () => <hr className='my-20 border-(--border-color) opacity-50' />,
   table: ({ children }: { children: React.ReactNode }) => (
-    <div className='my-12 overflow-x-auto'>
-      <table className='w-full border-collapse text-left'>{children}</table>
+    <div className='my-12 overflow-x-auto rounded-xl border border-(--border-color) bg-(--card-color)/60 p-2 shadow-[0_20px_45px_-40px_rgba(0,0,0,0.45)]'>
+      <table className='w-full min-w-[640px] border-separate border-spacing-0 text-left text-base'>
+        {children}
+      </table>
     </div>
   ),
   th: ({ children }: { children: React.ReactNode }) => (
-    <th className='border-b-2 border-[var(--main-color)] px-4 pb-4 text-[11px] font-black tracking-widest text-[var(--main-color)] uppercase'>
+    <th className='border-b border-(--border-color) bg-(--card-color)/80 px-5 py-4 text-[11px] font-black tracking-[0.24em] text-[var(--main-color)] uppercase'>
       {children}
     </th>
   ),
   td: ({ children }: { children: React.ReactNode }) => (
-    <td className='border-b border-[var(--border-color)] px-4 py-6 text-base text-[var(--secondary-color)]'>
+    <td className='border-b border-(--border-color)/80 px-5 py-4 text-base leading-relaxed text-[var(--secondary-color)]'>
       {children}
     </td>
   ),
@@ -202,6 +210,22 @@ const components = {
     <strong className='font-black text-[var(--main-color)]'>{children}</strong>
   ),
 };
+
+function normalizeListItems(children: React.ReactNode) {
+  return React.Children.toArray(children)
+    .map(child => {
+      if (React.isValidElement(child) && child.type === 'li') {
+        return child.props.children;
+      }
+      return child;
+    })
+    .filter(child => {
+      if (typeof child === 'string') {
+        return child.trim().length > 0;
+      }
+      return child !== null && child !== undefined;
+    });
+}
 
 /**
  * Individual Academy Post Page
