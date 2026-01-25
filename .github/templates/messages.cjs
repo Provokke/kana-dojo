@@ -256,5 +256,48 @@ module.exports = {
       ],
       footer: "**Questions?** Comment below and we'll help! 🙌",
     },
+    trivia: {
+      title:
+        '[Good First Issue] {emoji} Add New Trivia Question {id} (good-first-issue)',
+      header: '## 🧠 Add New Trivia Question',
+      category: 'Community Contribution - Trivia',
+      difficulty: 'Easy (good first issue!)',
+      estimatedTime: '2 minutes (good-first-issue!)',
+      taskDescription: 'Add this trivia question to our growing quiz bank!',
+      triviaHeader: '### The Trivia Question',
+      instructionsHeader: '### 📝 Instructions',
+      instructions: [
+        'Open [`public/{difficultyFile}`](../blob/main/public/{difficultyFile})',
+        'Add this trivia object to the end of the array (before the closing `]`)',
+        'Make sure to add a comma after the previous last item',
+        'Save the file and commit the changes',
+        'Submit a Pull Request with title: `content: add new trivia question`',
+        'Link this issue using `Closes #<issue_number>`',
+        'Star our repo ⭐, drink some delicious bubble tea 🍹 and wait for review!',
+      ],
+      footer: "**Questions?** Comment below and we'll help! 🙌",
+    },
+    grammar: {
+      title:
+        '[Good First Issue] {emoji} Add New Grammar Point {id} (good-first-issue)',
+      header: '## 📖 Add New Grammar Point',
+      category: 'Community Contribution - Grammar',
+      difficulty: 'Easy (good first issue!)',
+      estimatedTime: '2 minutes (good-first-issue!)',
+      taskDescription:
+        'Add this grammar explanation to our learner-friendly grammar list!',
+      grammarHeader: '### The Grammar Point',
+      instructionsHeader: '### 📝 Instructions',
+      instructions: [
+        'Open [`public/japanese-grammar.json`](../blob/main/public/japanese-grammar.json)',
+        'Add this grammar string to the end of the array (before the closing `]`)',
+        'Make sure to add a comma after the previous last item',
+        'Save the file and commit the changes',
+        'Submit a Pull Request with title: `content: add new grammar point`',
+        'Link this issue using `Closes #<issue_number>`',
+        'Star our repo ⭐, drink some delicious bubble tea 🍹 and wait for review!',
+      ],
+      footer: "**Questions?** Comment below and we'll help! 🙌",
+    },
   },
 };

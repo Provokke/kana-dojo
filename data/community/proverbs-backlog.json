@@ -1161,5 +1161,165 @@
     "english": "Good causes bring good results",
     "meaning": "Good deeds lead to good outcomes",
     "issued": false
+  },
+  {
+    "id": 131,
+    "japanese": "石の上にも三年",
+    "romaji": "Ishi no ue ni mo san nen",
+    "english": "Three years on a stone",
+    "meaning": "Perseverance brings results",
+    "issued": false
+  },
+  {
+    "id": 132,
+    "japanese": "急がば回れ",
+    "romaji": "Isogaba maware",
+    "english": "If in a hurry, go around",
+    "meaning": "The safer path can be faster",
+    "issued": false
+  },
+  {
+    "id": 133,
+    "japanese": "三日坊主",
+    "romaji": "Mikka bouzu",
+    "english": "A three-day monk",
+    "meaning": "Someone who quits quickly",
+    "issued": false
+  },
+  {
+    "id": 134,
+    "japanese": "喉元過ぎれば熱さを忘れる",
+    "romaji": "Nodomoto sugireba atsusa wo wasureru",
+    "english": "Once it passes your throat, you forget the heat",
+    "meaning": "People forget hardships once they are over",
+    "issued": false
+  },
+  {
+    "id": 135,
+    "japanese": "口は禍の元",
+    "romaji": "Kuchi wa wazawai no moto",
+    "english": "The mouth is the source of misfortune",
+    "meaning": "Careless words cause trouble",
+    "issued": false
+  },
+  {
+    "id": 136,
+    "japanese": "楽あれば苦あり",
+    "romaji": "Raku areba ku ari",
+    "english": "After ease comes hardship",
+    "meaning": "Good times and bad times alternate",
+    "issued": false
+  },
+  {
+    "id": 137,
+    "japanese": "一石二鳥",
+    "romaji": "Isseki nichou",
+    "english": "One stone, two birds",
+    "meaning": "Do two things with one action",
+    "issued": false
+  },
+  {
+    "id": 138,
+    "japanese": "継続は力なり",
+    "romaji": "Keizoku wa chikara nari",
+    "english": "Continuation is power",
+    "meaning": "Consistency builds strength",
+    "issued": false
+  },
+  {
+    "id": 139,
+    "japanese": "覆水盆に返らず",
+    "romaji": "Fukusui bon ni kaerazu",
+    "english": "Spilled water will not return to the tray",
+    "meaning": "What is done cannot be undone",
+    "issued": false
+  },
+  {
+    "id": 140,
+    "japanese": "棚からぼた餅",
+    "romaji": "Tana kara botamochi",
+    "english": "A rice cake falls from the shelf",
+    "meaning": "Unexpected good luck",
+    "issued": false
+  },
+  {
+    "id": 141,
+    "japanese": "泣きっ面に蜂",
+    "romaji": "Nakittsura ni hachi",
+    "english": "A bee on a crying face",
+    "meaning": "Misfortune never comes alone",
+    "issued": false
+  },
+  {
+    "id": 142,
+    "japanese": "知らぬが仏",
+    "romaji": "Shiranu ga hotoke",
+    "english": "Not knowing is Buddha",
+    "meaning": "Ignorance is bliss",
+    "issued": false
+  },
+  {
+    "id": 143,
+    "japanese": "三人寄れば文殊の知恵",
+    "romaji": "Sannin yoreba monju no chie",
+    "english": "Three people together have the wisdom of Monju",
+    "meaning": "Two heads are better than one",
+    "issued": false
+  },
+  {
+    "id": 144,
+    "japanese": "蛙の子は蛙",
+    "romaji": "Kaeru no ko wa kaeru",
+    "english": "A frog's child is a frog",
+    "meaning": "Children resemble their parents",
+    "issued": false
+  },
+  {
+    "id": 145,
+    "japanese": "転ばぬ先の杖",
+    "romaji": "Korobanu saki no tsue",
+    "english": "A cane before falling",
+    "meaning": "Prevention is better than cure",
+    "issued": false
+  },
+  {
+    "id": 146,
+    "japanese": "魚心あれば水心",
+    "romaji": "Uogokoro areba mizugokoro",
+    "english": "If fish has heart, water has heart",
+    "meaning": "Good intentions are reciprocated",
+    "issued": false
+  },
+  {
+    "id": 147,
+    "japanese": "二度あることは三度ある",
+    "romaji": "Nido aru koto wa sando aru",
+    "english": "What happens twice will happen a third time",
+    "meaning": "Patterns tend to repeat",
+    "issued": false
+  },
+  {
+    "id": 148,
+    "japanese": "出る釘は打たれる",
+    "romaji": "Deru kugi wa utareru",
+    "english": "The nail that sticks out gets hammered down",
+    "meaning": "Standing out invites criticism",
+    "issued": false
+  },
+  {
+    "id": 149,
+    "japanese": "馬子にも衣装",
+    "romaji": "Mago ni mo ishou",
+    "english": "Even a packhorse driver looks good in fine clothes",
+    "meaning": "Clothes make the person",
+    "issued": false
+  },
+  {
+    "id": 150,
+    "japanese": "七転び八起き",
+    "romaji": "Nanakorobi yaoki",
+    "english": "Fall seven times, get up eight",
+    "meaning": "Never give up",
+    "issued": false
   }
 ]

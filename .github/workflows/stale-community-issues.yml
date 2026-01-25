@@ -41,6 +41,8 @@ jobs:
             const themeBacklogPath = 'data/community/theme-backlog.json';
             const factsBacklogPath = 'data/community/facts-backlog.json';
             const proverbsBacklogPath = 'data/community/proverbs-backlog.json';
+            const triviaBacklogPath = 'data/community/trivia-backlog.json';
+            const grammarBacklogPath = 'data/community/grammar-backlog.json';
 
             let issues = [];
             let page = 1;
@@ -68,6 +70,8 @@ jobs:
             let themes = JSON.parse(fs.readFileSync(themeBacklogPath, 'utf8'));
             let facts = JSON.parse(fs.readFileSync(factsBacklogPath, 'utf8'));
             let proverbs = JSON.parse(fs.readFileSync(proverbsBacklogPath, 'utf8'));
+            let trivia = JSON.parse(fs.readFileSync(triviaBacklogPath, 'utf8'));
+            let grammar = JSON.parse(fs.readFileSync(grammarBacklogPath, 'utf8'));
 
             for (const issue of issues) {
               if (!issue.assignees || issue.assignees.length === 0) {
@@ -151,6 +155,32 @@ jobs:
                       console.log(`Proverb #${proverbId} is already completed, not re-enabling`);
                     }
                   }
+                } else if (title.includes('Add New Trivia Question #')) {
+                  const triviaIdMatch = title.match(/#(\d+)/);
+                  if (triviaIdMatch) {
+                    const triviaId = parseInt(triviaIdMatch[1]);
+                    const triviaIndex = trivia.findIndex(function(q) { return q.id === triviaId; });
+                    if (triviaIndex !== -1 && !trivia[triviaIndex].completed) {
+                      trivia[triviaIndex].issued = false;
+                      needsCommit = true;
+                      console.log(`Re-enabled trivia #${triviaId}`);
+                    } else if (triviaIndex !== -1 && trivia[triviaIndex].completed) {
+                      console.log(`Trivia #${triviaId} is already completed, not re-enabling`);
+                    }
+                  }
+                } else if (title.includes('Add New Grammar Point #')) {
+                  const grammarIdMatch = title.match(/#(\d+)/);
+                  if (grammarIdMatch) {
+                    const grammarId = parseInt(grammarIdMatch[1]);
+                    const grammarIndex = grammar.findIndex(function(g) { return g.id === grammarId; });
+                    if (grammarIndex !== -1 && !grammar[grammarIndex].completed) {
+                      grammar[grammarIndex].issued = false;
+                      needsCommit = true;
+                      console.log(`Re-enabled grammar #${grammarId}`);
+                    } else if (grammarIndex !== -1 && grammar[grammarIndex].completed) {
+                      console.log(`Grammar #${grammarId} is already completed, not re-enabling`);
+                    }
+                  }
                 }
                 
               } else if (timeSinceActivity >= WARNING_THRESHOLD_MS && !hasWarning) {
@@ -177,6 +207,8 @@ jobs:
               fs.writeFileSync(themeBacklogPath, JSON.stringify(themes, null, 2));
               fs.writeFileSync(factsBacklogPath, JSON.stringify(facts, null, 2));
               fs.writeFileSync(proverbsBacklogPath, JSON.stringify(proverbs, null, 2));
+              fs.writeFileSync(triviaBacklogPath, JSON.stringify(trivia, null, 2));
+              fs.writeFileSync(grammarBacklogPath, JSON.stringify(grammar, null, 2));
               core.setOutput('needs_commit', 'true');
             } else {
               core.setOutput('needs_commit', 'false');
