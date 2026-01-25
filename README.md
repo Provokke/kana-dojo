@@ -29,9 +29,9 @@ KanaDojo is an engaging web-based Japanese learning platform that makes masterin
 
 Start with the [Beginner's Contribution Guide](./docs/CONTRIBUTING-BEGINNERS.md) for a step-by-step walkthrough that explains everything from creating a GitHub account to opening your first PR.
 
-### Already comfortable with Git?
+### Not a beginner?
 
-Contributions are welcome! Whether you're fixing bugs, adding features, improving documentation, or translating — check out [CONTRIBUTING.md](./CONTRIBUTING.md) to get started.
+All contributions are welcome! Whether you're fixing bugs, adding features, improving documentation, or translating — check out [CONTRIBUTING.md](./CONTRIBUTING.md) to get started.
 
 [Live Demo](https://kanadojo.com) · [Documentation](./docs/)
 
