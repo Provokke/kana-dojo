@@ -7,8 +7,14 @@ import UnitSelector from '@/shared/components/Menu/UnitSelector';
 import { VocabCards } from '@/features/Vocabulary';
 import { vocabDataService } from '@/features/Vocabulary/services/vocabDataService';
 
+const PRELOAD_FLAG = 'vocab-preload-complete';
+
 const VocabMenu = () => {
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (sessionStorage.getItem(PRELOAD_FLAG)) return;
+
+    sessionStorage.setItem(PRELOAD_FLAG, 'true');
     void vocabDataService.preloadAll();
   }, []);
 

@@ -7,8 +7,14 @@ import UnitSelector from '@/shared/components/Menu/UnitSelector';
 import { KanjiCards } from '@/features/Kanji';
 import { kanjiDataService } from '@/features/Kanji/services/kanjiDataService';
 
+const PRELOAD_FLAG = 'kanji-preload-complete';
+
 const KanjiMenu = () => {
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (sessionStorage.getItem(PRELOAD_FLAG)) return;
+
+    sessionStorage.setItem(PRELOAD_FLAG, 'true');
     void kanjiDataService.preloadAll();
   }, []);
 
